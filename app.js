@@ -5,8 +5,27 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+
+//Require angularApp.js file
+
+//Require mongoose
+var mongoose = require('mongoose');
+var user = "alejandrok";
+var password = "temp123";
+var uri = 'mongodb://' + user  + ':' + password + '@ds059195.mongolab.com:59195/online-furniture';
+
+//Require db schema files
+require('./models/Products');
+
+
+//Connect to mongo db
+mongoose.connect(uri);
+//mongoose.connect('mongodb://localhost/news');
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
+
+
 
 var app = express();
 
