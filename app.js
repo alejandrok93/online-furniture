@@ -20,7 +20,7 @@ require('./models/Products');
 
 //Connect to mongo db
 mongoose.connect(uri);
-//mongoose.connect('mongodb://localhost/news');
+
 
 var routes = require('./routes/index');
 var users = require('./routes/users');

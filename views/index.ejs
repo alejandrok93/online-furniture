@@ -23,13 +23,13 @@
 
 
 
-            <!--<input type="text" ng-model="yourName" placeholder="Enter a name here">-->
-            <!--<h1>Hello, {{ yourName }}!</h1>-->
+            <input type="text" ng-model="yourName" placeholder="Enter a name here">
+            <h1>Hello, {{ yourName }}!</h1>
 
         <!--Buy now button-->
-        <form>
+        <form ng-controller="BuyCtrl" >
             <input type="text" ng-model="text" name="text">
-        <button ng-submit="buyNow">Submit</button>
+        <button ng-submit="submit">Submit</button>
         </form>
 
       {{list}}

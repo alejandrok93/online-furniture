@@ -14,26 +14,36 @@ router.get('/', function(req, res, next) {
 /*GET all products */
 router.get('/products', function(req, res, next) {
 
-  var tmp = Product.find(function(err, p) {
+  var query = Product.find(function(err, p) {
     if(err) {return next(err); }
 
-
-    res.json(tmp);
+ var p =  query.exec(tmp);
+    console.log(p);
+    res.json(p);
 
   });
 
 });
 
 
+/*Express param function to get post and be able to use :post */
+router.param('productID', function(req, res, next, id) {
+  var query = Product.findById(id);
+
+  query.exec(function (err, productID) {
+    if (err) {return next(err); }
+    if (!post) {return next(new Error('cant find post')); }
+
+    req.productID = productID;
+    return next();
+  });
+});
+
+
+
 /*GET product page using product ID  */
-router.get('/products/:post', function(req, res) {
-  Product.findByID(id, function(err, p) {
-      if (err)  {next(err); }
-
-    res.json(p);
-
-
-  })
+router.get('/posts/:productID', function(req, res) {
+  res.json(req.product);
 })
 
 
