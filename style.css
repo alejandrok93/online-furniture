@@ -1,5 +1,10 @@
 /* Navigation Bar */
 
+.container {
+	width:1000px !important;
+	margin 0 auto;
+}
+
 nav {
 	border-bottom: 1px solid #d3d6dd;
 	height:90px;
@@ -52,11 +57,11 @@ div.header {
 }
 
 div.header div.chair {
-	background: url('./img/chair.png') left center;
-	width:372px;
-	height: 285px;
+	background: url('./img/lol.png') left center;
+	width:446px;
+	height: 215px;
 	position: relative;
-	top:55px;
+	top:107px;
 	float:left;
 }
 
@@ -113,10 +118,15 @@ button.cool_button#info {
 }
 
 button.cool_button#order {
-	background-color: #e57e39;
+	background-color: #2C90CD;
 }
 
 /* Products */
+
+div.grid {
+	margin-bottom: 15px;
+	height:100px;
+}
 
 div.grid h2 {
 	font-family: 'Roboto', sans-serif;
@@ -128,9 +138,7 @@ div.grid div.left {
 	float: left;
 }
 
-div.grid div.right {
-	float:right;
-}
+div.grid div.right {}
 
 div.grid div.left div.box {
 	width: 223px;
@@ -158,11 +166,13 @@ div.grid div.long_vertical {
 }
 
 div.grid div.right div.box {
-	width: 218px;
-	height: 210px;
+	width: 224px;
+	height: 202px;
 	background-color: #e7eaf0;
-	display: inline-block;
+	display: block;
 	margin-right: 12px;
+	vertical-align: top;
+	float:right;
 }
 
 div.grid div.right div.box#last {
@@ -178,9 +188,11 @@ footer {
 }
 
 footer div.links {
-	line-height: 90px;
+	line-height: 65px;
 	float:left;
 	color: #99A4BA;
+	position: relative;
+  	top: 11px;
 }
 
 footer p, footer a {
@@ -200,7 +212,9 @@ footer .dot {
 footer .social {
 	display: inline-block;
 	float: right;
-	line-height: 90px;
+	line-height: 65px;
+	position: relative;
+	top: 14px;
 }
 
 footer .social i {
@@ -224,6 +238,143 @@ footer .icons {
   	float: right;
   	margin-left: 8px;
 }
+
+/* =============PRODUCTS============== */
+
+div.product_info {
+	float: right;
+	border: #eeeeee 1px solid;
+	display: inline-block;
+	padding: 1px 38px;
+	margin-top:15px;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	height:152px;
+}
+
+div.product_info h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 40px;
+
+
+}
+
+div.threedee {
+	display: inline-block;
+	height:651px;
+	margin-top: 15px;
+	width:605px;
+	float:left;
+	background-color: #eeeeee;
+}
+
+h3#price {
+	display: inline-block;
+	float:left;
+	margin-top: 0px;
+	font-family: 'Roboto',sans-serif;
+  	font-weight: 300;
+  	padding: 7px 6px;
+ 	width: 93px;
+  	background-color: #FAFAFA;
+  	border:1px solid rgb(210, 210, 210);
+  	-webkit-border-top-left-radius: 3px;
+  	border-right:none;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	text-indent: 17px;
+	line-height: 37px;
+	height: 52px;
+}
+
+button.product {
+	width: 180px;
+	display: inline-block;
+	background-color: #eeeeee;
+	float:right;
+	border-style: none;
+	border:1px solid rgb(210, 210, 210);
+	font-family: 'Roboto', sans-serif;
+	-webkit-border-top-right-radius: 3px !important;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	padding: 7px 6px;
+	position: relative;
+	margin-top: -15px;
+	height: 52px;
+	top:-47px;
+	line-height: 2px;
+	font-weight: 500;
+	font-size: 17px;
+}
+
+div.controls {
+	border: #eeeeee 1px solid;
+	padding: 1px 38px;
+	display: block;
+	position: relative;
+	top:-1px;
+	float:right;
+	height:500px;
+	width: 349.609375px;
+}
+
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 90px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 90px;
+}
+
+button:focus {
+    outline:none;
+}
+
+button:active {
+	background-color: #DFDFDF;
+}
+
+.thanks {
+	position: relative;
+	top:23px;
+	font-family: 'Roboto', sans-serif;
+	left: 698px;
+
+	width:200px;
+	padding:10px 5px;
+}
+
+#last-box {
+	position: relative;
+  	top: -207px;
+}
+
+#top {
+	background-image: url('./img/custom_table@2x.png');
+}
+
 
 
 

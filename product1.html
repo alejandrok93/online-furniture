@@ -10,13 +10,29 @@
   <title>Fayble</title>
 
   <!-- Bootstrap -->
-  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
-
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .btn {
+      width: 150px;
+      display: inline-block;
+      background-color: #eeeeee;
+      float:right;
+      -webkit-border-top-right-radius: 3px !important;
+      -webkit-border-bottom-right-radius: 3px;
+      -moz-border-radius-topright: 3px;
+      -moz-border-radius-bottomright: 3px;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      padding: 7px 6px;
+      margin-top: -5px;
+      height: 42px;
+    }
+  </style>
 
   <!-- Angular -->
-   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
-   <script src="productApp.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+  <script src="productApp.js"></script>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,80 +46,70 @@
         <div class="container">
          <a href="index.html" ><div class="img img-responsive" id="logo"></div></a>
 
-          <div class="nav-right">
-            <a href="" id="login">LOG IN</a>
-            <i class="fa fa-search"></i>
-            <i class="fa fa-shopping-cart"></i>
-            <i class="fa fa-life-ring"></i>
-          </div>
-        </div> 
-      </nav>
+         <div class="nav-right">
+          <a href="" id="login">LOG IN</a>
+          <i class="fa fa-search"></i>
+          <i class="fa fa-shopping-cart"></i>
+          <i class="fa fa-life-ring"></i>
+        </div>
+      </div> 
+    </nav>
 
-<!-- product description body -->
-
-<div ng-app="fayble" ng-controller="ProductCtrl" >
-
-<div class="text-center">
-
-
-<h1> {{p.name}} </h1>
-<h3> Description: {{p.description}} <br>
-Price: {{p.price}}</h3>
-
-<form ng-submit="buyNow()">
-
-<button input type="submit" class="btn btn-primary" >Buy</button>
-
-</form>
-
-</div>
-
-
-{{purchase}}
-
-</div>
-
-
-
-
-
-<!-- end product description body -->
-    
-
-      <footer>
-        <div class="container">
-          <div class="links">
-            <p>&copy; 2016 Fayble</p>
-            <span class="dot">&middot;</span>
-            <a href="">About</a>
-            <span class="dot">&middot;</span>
-            <a href="">Blog</a>
-            <span class="dot">&middot;</span>
-            <a href="">Privacy</a>
-          </div>
-
-          <div class="social">
-            <p class="connect">Connect with us</p>
-            <div class="icons">
-            <a href="">
-              <i class="fa fa-facebook-square"></i>
-              </a>
-              <a href="">
-              <i class="fa fa-twitter-square"></i>
-              </a>
-              <a href="">
-              <i class="fa fa-instagram"></i>
-              </a>
-            </div>
+    <!-- product description body -->
+    <div ng-app="fayble" ng-controller="ProductCtrl" >
+      <div class="container">
+        <div class="threedee"></div>
+        <div class="product_info">
+          <h1> {{p.name}} </h1>
+          <div class="buy">
+            <h3 id="price">${{p.price}}</h3>
+            <form ng-submit="buyNow()">
+              <button input type="submit" class="product">BUY</button>
+            </form>
           </div>
         </div>
+        <div class="controls">
 
-      </footer>
-
+        </div>
+        <div class="thanks">
+        {{purchase}}
+        </div>
+      </div>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="./bs/js/bootstrap.min.js"></script>
-  </body>
-  </html>
+
+    <!-- end product description body -->
+    <footer class="footer">
+      <div class="container">
+        <div class="links">
+          <p>&copy; 2016 Fayble</p>
+          <span class="dot">&middot;</span>
+          <a href="">About</a>
+          <span class="dot">&middot;</span>
+          <a href="">Blog</a>
+          <span class="dot">&middot;</span>
+          <a href="">Privacy</a>
+        </div>
+
+        <div class="social">
+          <p class="connect">Connect with us</p>
+          <div class="icons">
+            <a href="">
+              <i class="fa fa-facebook-square"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter-square"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="./bs/js/bootstrap.min.js"></script>
+</body>
+</html>
